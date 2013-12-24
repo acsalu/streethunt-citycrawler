@@ -14,7 +14,7 @@ $(document).ready(function() {
 
     $('#menu-direction a').click(function() {
       hasSelectedDirection = true;
-      $('#menu-direction > button').html($(this).html() + ' <span class="caret"></span>')
+      $('#direction').html($(this).html())
     });
 
 
@@ -34,7 +34,7 @@ $(document).ready(function() {
           var parseNode = new ParseNode();
           parseNode.set("lat", markers[i].position.lat());
           parseNode.set("lng", markers[i].position.lng());
-          parseNode.set("direction", $('#menu-direction > button').html());
+          parseNode.set("direction", $('#direction').html());
           parseNode.set("streetName", streetName);
 
           parseNodes.push(parseNode);
